@@ -1,0 +1,26 @@
+<div class="dog-wrapper">
+    <h1>Dog Page</h1>
+    
+    <h2>Click to get an random dog</h2>
+    <button
+        class="random-dog-button"
+        (click)="getDog(false, '')"
+        (click)="dialog.showModal()"
+        ><b>{{dogType.RANDOM}} Dog</b>
+    </button>
+
+    <h2>Looking for a specific breed? Check out the breeds below</h2>
+    <div class="button-types-wrapper">
+        <button 
+            *ngFor="let dType of dogType | keyvalue: ngForNoOrder | slice:1"
+            (click)="getDog(true, dType.value)"
+            (click)="dialog.showModal()"
+            >{{dType.value}}
+        </button>
+    </div>
+
+    <dialog #dialog>
+        <img src="{{currentDog.message}}"><br/>
+        <button (click)="dialog.close()" (click)="clearDialog()">Close</button>
+    </dialog>
+</div>

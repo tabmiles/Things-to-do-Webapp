@@ -1,0 +1,17 @@
+<div class="home-wrapper">
+    <h1>{{pageDescriptions.HOME}}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let page of pageDescriptions | keyvalue: ngForNoOrder | slice:1; index as i">{{page.value}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th *ngFor="let pageRoute of pageRoutes | keyvalue: ngForNoOrder | slice:1">
+                    <button routerLink="{{pageRoute.value}}">{{pageRoute.value}} page</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

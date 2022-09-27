@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+    margin: 15px;
+    display: inline-block;
+    text-align: center;
+    background-color:rgb(187, 225, 238);
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    width: fit-content;
+    padding: 10px;
+}
+
+dialog {
+    border: none;
+    min-width: 25%;
+    max-width: 50%;
+    max-height: 75%;
+    button{
+        background-color:rgb(187, 225, 238);
+        border-radius: 8px;
+        margin: 0px;
+        border: none;
+        font-size: 15px;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}

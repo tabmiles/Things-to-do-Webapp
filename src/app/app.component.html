@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <li *ngFor="let page of pages | keyvalue: ngForNoOrder">
+      <a routerLink="{{pageRoutes[page.value]}}">{{page.value}}</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
