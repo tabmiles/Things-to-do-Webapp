@@ -5,7 +5,6 @@
     <button
         class="random-joke-button"
         (click)="getJoke(jokeType.RANDOM, null)"
-        (click)="dialog.showModal()"
         ><b>{{jokeType.RANDOM}} Joke</b>
     </button>
 
@@ -14,7 +13,6 @@
         <button 
             *ngFor="let jType of jokeType | keyvalue | slice:1"
             (click)="getJoke(jType.value, null)"
-            (click)="dialog.showModal()"
             >{{jType.value}}
         </button>
     </div>
@@ -24,14 +22,13 @@
         <button 
             *ngFor="let jLength of jokeLength | keyvalue"
             (click)="getJoke(jokeType.RANDOM, jLength.value)"
-            (click)="dialog.showModal()"
             >{{jLength.value}}
         </button>
     </div>
 
     <h2>TODO: implement blacklist flags</h2>
 
-    <dialog #dialog>
+    <!-- <dialog #dialog>
         <h2 id="dialog-header">A {{currentJoke.category}} Joke:</h2>
         <ng-container *ngFor="let flag of currentJoke.flags | keyvalue">
             <p *ngIf="flag.value" class="flag">**{{flag.key}} </p>
@@ -40,5 +37,5 @@
         <p *ngIf="currentJoke.setup" class="joke" id="delivery">{{currentJoke.delivery}}</p>
         <p *ngIf="currentJoke.joke" class="joke" id="joke">{{currentJoke.joke}}</p>
         <button (click)="dialog.close()" (click)="clearDialog()">Close</button>
-    </dialog>
+    </dialog> -->
 </div>

@@ -9,6 +9,8 @@ import { JokeComponent } from './joke/joke.component';
 import { DogComponent } from './dog/dog.component';
 import { FormsModule } from '@angular/forms';
 import { DialogModalComponent } from './shared/dialog-modal/dialog-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DialogModalComponent } from './shared/dialog-modal/dialog-modal.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

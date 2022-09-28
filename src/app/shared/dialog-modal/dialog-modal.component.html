@@ -1,1 +1,19 @@
-<p>dialog-modal works!</p>
+<div class="dialog-wrapper">
+    <h1 mat-dialog-title>A {{data.title}}</h1>
+
+    <div class="subcontent-wrapper" *ngIf="data.subcontent" mat-dialog-content>
+        <p class="flags" *ngFor="let d of data.subcontent"><i>**{{d}} </i></p>
+    </div>
+
+    <div class="content-wrapper" *ngIf="!data.image" mat-dialog-content>
+        <p class="content" *ngFor="let d of data.content">{{d}}</p>
+    </div>
+
+    <div class="image-wrapper" *ngIf="data.image" mat-dialog-content>
+        <img class="image" src="{{data.image}}">
+    </div>
+
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</div>

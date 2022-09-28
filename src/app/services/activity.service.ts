@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Activity } from '../shared/common.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +10,13 @@ export class ActivityService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getActivity(type: string){
+  public getActivity(type: string): Observable<Activity> {
+    console.log('** ActivityService');
     if(type=='random'){
-      return this.httpClient.get('http://www.boredapi.com/api/activity/');
+      return this.httpClient.get<Activity>('http://www.boredapi.com/api/activity/');
     }else{
-      console.log(`http://www.boredapi.com/api/activity?type=${type}`);
-      return this.httpClient.get(`http://www.boredapi.com/api/activity?type=${type}`);
+      return this.httpClient.get<Activity>(`http://www.boredapi.com/api/activity?type=${type}`);
     }
-    
   }
 
 }

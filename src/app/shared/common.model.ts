@@ -105,3 +105,16 @@ export enum PageRoutes {
 	JOKE = 'joke',
 	DOG = 'dog'
 }
+
+export interface DialogData {
+	title: string;
+	content: [];
+	subcontent: [];
+	image: string;
+}
+
+export enum DialogHeaders {
+	ACTIVITY = ' activity to try!',
+	JOKE = ' Joke',
+	DOG = ' dog',
+}

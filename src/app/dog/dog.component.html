@@ -5,7 +5,6 @@
     <button
         class="random-dog-button"
         (click)="getDog(false, '')"
-        (click)="dialog.showModal()"
         ><b>{{dogType.RANDOM}} Dog</b>
     </button>
 
@@ -14,13 +13,7 @@
         <button 
             *ngFor="let dType of dogType | keyvalue: ngForNoOrder | slice:1"
             (click)="getDog(true, dType.value)"
-            (click)="dialog.showModal()"
             >{{dType.value}}
         </button>
     </div>
-
-    <dialog #dialog>
-        <img src="{{currentDog.message}}"><br/>
-        <button (click)="dialog.close()" (click)="clearDialog()">Close</button>
-    </dialog>
 </div>

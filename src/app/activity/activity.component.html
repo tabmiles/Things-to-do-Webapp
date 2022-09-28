@@ -4,7 +4,6 @@
     <button
         class="random-activity-button"
         (click)="getActivity(activityType.RANDOM)"
-        (click)="dialog.showModal()"
         ><b>{{activityType.RANDOM}} activity</b>
     </button>
     
@@ -13,14 +12,7 @@
         <button 
             *ngFor="let actType of activityType | keyvalue | slice:1"
             (click)="getActivity(actType.value)"
-            (click)="dialog.showModal()"
             >{{actType.value}}
         </button>
     </div>
-
-    <dialog #dialog>
-        <h2 id="dialog-header">Try this!</h2>
-        <p id="activity">{{currentActivity.activity}}</p>
-        <button (click)="dialog.close()" (click)="clearDialog()">Close</button>
-    </dialog>
 </div>

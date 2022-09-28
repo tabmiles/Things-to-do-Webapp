@@ -11,20 +11,10 @@ button {
     padding: 10px;
 }
 
-dialog {
-    border: none;
-    min-width: 25%;
-    max-width: 50%;
-    max-height: 75%;
-    button{
-        background-color:rgb(187, 225, 238);
-        border-radius: 8px;
-        margin: 0px;
-        border: none;
-        font-size: 15px;
-    }
+.mat-dialog-container {
+    max-width: 100% !important;
+    max-height: 80% !important;
 }
 
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.2);
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
