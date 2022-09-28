@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { JokeComponent } from './joke/joke.component';
 import { DogComponent } from './dog/dog.component';
 import { FormsModule } from '@angular/forms';
+import { DialogModalComponent } from './shared/dialog-modal/dialog-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     JokeComponent,
     DogComponent,
+    DialogModalComponent,
   ],
   imports: [
     BrowserModule,
