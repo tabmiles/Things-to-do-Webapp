@@ -100,6 +100,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/things-to-do-webapp",
+            "netlifyToken": "CCeC-T5zyUBLHyVUv5XfTW1iroJwTiDlVIHuiEkyUwI",
+            "siteId": "de1f8a41-ca8d-4379-9496-b73bad849eeb"
+          }
         }
       }
     }
