@@ -92,11 +92,35 @@ export enum PageType {
 	DOG = 'DOG'
 }
 
-export enum PageDescription {
+export enum HomePageDescription {
 	HOME = 'Welcome! I have things for you...',
 	ACTIVITY = 'Bored? Try an activity!',
 	JOKE = 'Need a laugh? Get a joke here',
 	DOG = 'Think dogs are cute? See the dog page for a smile'
+}
+
+export enum Labels {
+	PAGE_LABEL = ' page',
+	DOUBLE_ASTERICS_LABEL = '**'
+}
+
+export enum ActivityPageDescription {
+	HEADER = 'Activity Page',
+	RANDOM_ACTIVITY_HEADER = 'Click to get an activity suggestion',
+	TYPE_ACTIVITY_HEADER = 'Looking for a specific type? Check out the types below'
+}
+
+export enum JokePageDescription {
+	HEADER = 'Joke Page',
+	RANDOM_JOKE_HEADER = 'Click to get an random joke',
+	TYPE_JOKE_HEADER = 'Looking for a specific type? Check out the type of jokes below',
+	PART_TYPE_JOKE_HEADER = 'Single or Two-Part Jokes'
+}
+
+export enum DogPageDescription {
+	HEADER = 'Dog Page',
+	RANDOM_DOG_HEADER = 'Click to get an random dog',
+	TYPE_DOG_HEADER = 'Looking for a specific breed? Check out the breeds below'
 }
 
 export enum PageRoutes { 

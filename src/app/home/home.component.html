@@ -9,7 +9,7 @@
         <tbody>
             <tr>
                 <th *ngFor="let pageRoute of pageRoutes | keyvalue: ngForNoOrder | slice:1">
-                    <button routerLink="{{pageRoute.value}}">{{pageRoute.value}} page</button>
+                    <button routerLink="{{pageRoute.value}}">{{pageRoute.value}}{{label.PAGE_LABEL}}</button>
                 </th>
             </tr>
         </tbody>

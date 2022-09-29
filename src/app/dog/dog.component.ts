@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DogService } from '../services/dog.service';
-import { DialogHeaders, Dog, DogType } from '../shared/common.model';
+import { DialogHeaders, Dog, DogPageDescription, DogType } from '../shared/common.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogModalComponent } from '../shared/dialog-modal/dialog-modal.component';
 import { Subscription } from 'rxjs';
@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class DogComponent implements OnInit, OnDestroy {
   dogType = DogType;
+  pageDescription = DogPageDescription;
   subscriber = Subscription.EMPTY ;
   ngForNoOrder () {return 0;}
 

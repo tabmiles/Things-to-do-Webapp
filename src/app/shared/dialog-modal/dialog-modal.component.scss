@@ -1,17 +1,23 @@
-.flags{
-    display: inline;
-}
-.mat-dialog-title {
-    margin-bottom: 5px;
-}
-button {
-    margin-left: 0px;
-}
-.content-wrapper {
-    padding-top: 15px;
-}
+.dialog-wrapper {
+    .flags{ display: inline; }
 
-img {
-    max-width: 400px;
-    max-height: 400px;
+    .mat-dialog-title { margin-bottom: 5px; }
+
+    button { margin-left: 0px; }
+
+    .content-wrapper { padding-top: 15px; }
+
+    img {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    p {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    h1 {
+        margin-bottom: 8px !important;
+    }
 }

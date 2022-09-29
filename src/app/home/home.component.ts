@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PageDescription, PageRoutes, PageType } from '../shared/common.model';
+import { HomePageDescription, Labels, PageRoutes, PageType } from '../shared/common.model';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,8 @@ import { PageDescription, PageRoutes, PageType } from '../shared/common.model';
 })
 export class HomeComponent implements OnInit {
   pageRoutes = PageRoutes;
-  pageDescriptions = PageDescription;
+  pageDescriptions = HomePageDescription;
+  label = Labels;
   ngForNoOrder () {return 0;}
 
   constructor() { }

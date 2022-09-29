@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivityService } from '../services/activity.service';
-import { Activity, ActivityType, DialogHeaders } from '../shared/common.model';
+import { Activity, ActivityType, DialogHeaders, ActivityPageDescription } from '../shared/common.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogModalComponent } from '../shared/dialog-modal/dialog-modal.component';
 import { Subscription } from 'rxjs';
@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class ActivityComponent implements OnInit, OnDestroy {
   activityType = ActivityType;
+  pageDescription = ActivityPageDescription;
   subscriber = Subscription.EMPTY ;
 
   constructor(private activityService: ActivityService, public dialog: MatDialog) { }

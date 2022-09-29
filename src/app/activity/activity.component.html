@@ -1,14 +1,17 @@
-<div class="activity-wrapper">
-    <h1>Activity Page</h1>
-    <h2>Click to get an activity suggestion</h2>
-    <button
-        class="random-activity-button"
-        (click)="getActivity(activityType.RANDOM)"
-        ><b>{{activityType.RANDOM}} activity</b>
-    </button>
-    
-    <h2>Looking for a specific type? Check out the types below</h2>
+<div class="page-wrapper">
+    <h1>{{pageDescription.HEADER}}</h1>
+
+    <div class="random-activity-wrapper">
+        <h2>{{pageDescription.RANDOM_ACTIVITY_HEADER}}</h2>
+        <button
+            class="random-activity-button"
+            (click)="getActivity(activityType.RANDOM)"
+            ><b>{{activityType.RANDOM}} activity</b>
+        </button>
+    </div><br>
+
     <div class="button-types-wrapper">
+        <h2>{{pageDescription.TYPE_ACTIVITY_HEADER}}</h2>
         <button 
             *ngFor="let actType of activityType | keyvalue | slice:1"
             (click)="getActivity(actType.value)"

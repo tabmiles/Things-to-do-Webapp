@@ -1,41 +1,32 @@
-<div class="joke-wrapper">
-    <h1>Joke Page</h1>
+<div class="page-wrapper">
+    <h1>{{pageDescription.HEADER}}</h1>
 
-    <h2>Click to get an random joke</h2>
-    <button
-        class="random-joke-button"
-        (click)="getJoke(jokeType.RANDOM, null)"
-        ><b>{{jokeType.RANDOM}} Joke</b>
-    </button>
+    <div class="random-joke-wrapper">
+        <h2>{{pageDescription.RANDOM_JOKE_HEADER}}</h2>
+        <button
+            class="random-joke-button"
+            (click)="getJoke(jokeType.RANDOM, null)"
+            ><b>{{jokeType.RANDOM}} Joke</b>
+        </button>
+    </div><br>
 
-    <h2>Looking for a specific type? Check out the types below</h2>
     <div class="button-types-wrapper">
+        <h2>{{pageDescription.TYPE_JOKE_HEADER}}</h2>
         <button 
             *ngFor="let jType of jokeType | keyvalue | slice:1"
             (click)="getJoke(jType.value, null)"
             >{{jType.value}}
         </button>
-    </div>
+    </div><br>
 
-    <h2>Single or Two-Part Jokes</h2>
-    <div class="button-types-wrapper">
+    <div class="button-part-types-wrapper">
+        <h2>{{pageDescription.PART_TYPE_JOKE_HEADER}}</h2>
         <button 
             *ngFor="let jLength of jokeLength | keyvalue"
             (click)="getJoke(jokeType.RANDOM, jLength.value)"
             >{{jLength.value}}
         </button>
-    </div>
+    </div><br>
 
     <h2>TODO: implement blacklist flags</h2>
-
-    <!-- <dialog #dialog>
-        <h2 id="dialog-header">A {{currentJoke.category}} Joke:</h2>
-        <ng-container *ngFor="let flag of currentJoke.flags | keyvalue">
-            <p *ngIf="flag.value" class="flag">**{{flag.key}} </p>
-        </ng-container>
-        <p *ngIf="currentJoke.setup" class="joke" id="set-up">{{currentJoke.setup}}</p>
-        <p *ngIf="currentJoke.setup" class="joke" id="delivery">{{currentJoke.delivery}}</p>
-        <p *ngIf="currentJoke.joke" class="joke" id="joke">{{currentJoke.joke}}</p>
-        <button (click)="dialog.close()" (click)="clearDialog()">Close</button>
-    </dialog> -->
 </div>

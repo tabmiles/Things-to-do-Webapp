@@ -2,7 +2,7 @@
     <h1 mat-dialog-title>A {{data.title}}</h1>
 
     <div class="subcontent-wrapper" *ngIf="data.subcontent" mat-dialog-content>
-        <p class="flags" *ngFor="let d of data.subcontent"><i>**{{d}} </i></p>
+        <p class="flags" *ngFor="let d of data.subcontent"><i>{{labels.DOUBLE_ASTERICS_LABEL}}{{d}} </i></p>
     </div>
 
     <div class="content-wrapper" *ngIf="!data.image" mat-dialog-content>

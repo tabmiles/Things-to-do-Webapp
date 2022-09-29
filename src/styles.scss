@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 button {
     margin: 15px;
     display: inline-block;
@@ -9,12 +8,15 @@ button {
     font-size: 15px;
     width: fit-content;
     padding: 10px;
+    padding: 1rem;
 }
 
-.mat-dialog-container {
-    max-width: 100% !important;
-    max-height: 80% !important;
-}
+.mat-dialog-container { max-width: 100% !important; max-height: 80% !important; }
+
+.page-wrapper { margin: 8px; text-align: center; }
+
+h1, h2, button, p, tr, th { font-family: Futura, "Trebuchet MS", Arial, sans-serif; text-align: center; }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body { margin: 0; font-family: Futura, "Trebuchet MS", Arial, sans-serif; }

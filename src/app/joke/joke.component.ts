@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { JokeService } from '../services/joke.service';
-import { DialogHeaders, Joke, JokeLineLength, JokeType } from '../shared/common.model';
+import { DialogHeaders, Joke, JokeLineLength, JokePageDescription, JokeType } from '../shared/common.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogModalComponent } from '../shared/dialog-modal/dialog-modal.component';
 import { Subscription } from 'rxjs';
@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class JokeComponent implements OnInit, OnDestroy {
   jokeLength = JokeLineLength;
   jokeType = JokeType;
+  pageDescription = JokePageDescription;
   subscriber = Subscription.EMPTY ;
 
   constructor(private jokeService: JokeService, public dialog: MatDialog) { }

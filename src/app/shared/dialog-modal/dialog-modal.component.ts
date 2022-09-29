@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogData } from '../common.model';
+import { DialogData, Labels } from '../common.model';
 
 @Component({
   selector: 'app-dialog-modal',
@@ -8,6 +8,7 @@ import { DialogData } from '../common.model';
   styleUrls: ['./dialog-modal.component.scss']
 })
 export class DialogModalComponent implements OnInit {
+  labels = Labels;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
