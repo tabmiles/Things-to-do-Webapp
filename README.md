@@ -1,6 +1,7 @@
 # ThingsToDoWebapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+It is also uploaded to Netlify and can be accessed online in this link:https://things-to-do-webapp.netlify.app/ . However, I'm using a free version so you can only refresh from the home page and NOT the other pages.
 
 ## API
 
