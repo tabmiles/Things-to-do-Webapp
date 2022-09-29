@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+## API
+
+This project used 3 open APIs:
+- Bored API (https://www.boredapi.com/documentation#endpoints-random)
+- JokeAPI (https://sv443.net/jokeapi/v2/)
+- Dog API (https://dog.ceo/dog-api/documentation/)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
